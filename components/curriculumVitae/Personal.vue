@@ -13,6 +13,25 @@ const summaryDetail = computed(() => {
   return type === 'string' ? detail.split(';') : detail
 })
 // #endregion
+const url = useRequestURL()
+useSeoMeta({
+  title: personal.value.fullName || 'CV',
+  description: summaryDetail.value.join(','),
+  ogType: 'website',
+  ogImage: '/thumbnail.png',
+  ogSiteName: personal.value.fullName,
+  ogTitle: personal.value.fullName || 'CV',
+  ogDescription: summaryDetail.value.join(','),
+  ogUrl: url.href,
+  'twitter:title': personal.value.fullName || 'CV',
+  'twitter:description': summaryDetail.value.join(','),
+  'twitter:author': awesome?.author?.name,
+  'twitter:image': '/thumbnail.png',
+  'twitter:image:alt': awesome?.author?.name,
+  'twitter:site': url.host,
+  'twitter:creator': awesome?.author?.name,
+  'twitter:card': 'summary_large_image',
+})
 </script>
 <template>
   <div class="mx-auto h-fit border-b border-b-gray-300">
