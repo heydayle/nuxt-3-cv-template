@@ -36,6 +36,8 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     // contents,
     '@nuxt/content',
+    // locale
+    '@nuxtjs/i18n',
 
     // todo: feat/localization
     // '@nuxtjs/i18n'
@@ -88,6 +90,26 @@ export default defineNuxtConfig({
     },
   },
 
+  // localization
+  i18n: {
+    locales: [
+      {
+        code: 'en',
+        name: 'English',
+        file: 'en-US.ts',
+      },
+      {
+        code: 'vi',
+        name: 'Việt Nam',
+        file: 'vi-VN.ts',
+      },
+    ],
+    defaultLocale: 'en',
+    lazy: true,
+    langDir: 'locales/',
+    detectBrowserLanguage: false,
+    reloadOnLanguageChange: false,
+  },
   // todo: feat/localization
   // module::i18n
   // i18n: {

@@ -72,6 +72,7 @@ export default <Partial<Config>>{
         blue: MyTheme.colors.blue,
         red: MyTheme.colors.red,
         slate: colors.slate,
+        blackBlue: '#0E6CC2',
       },
       fontFamily: {
         sans: ['Nunito', ...defaultTheme.fontFamily.sans],

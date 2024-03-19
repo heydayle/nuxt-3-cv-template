@@ -1,0 +1,14 @@
+.title-blue {
+  @apply text-blackBlue font-semibold
+}
+.title-secondary {
+  @apply text-gray-400 font-semibold
+}
+html.dark {
+  .title-blue {
+    @apply text-white
+  }
+  .title-secondary {
+    @apply text-gray-500
+  }
+}

@@ -1,0 +1,66 @@
+<script setup lang="ts">
+// #region [Data]
+import type { Personal, Summary } from '~/utils/curriculumVitae'
+
+const { awesome } = useAppConfig()
+const personal = computed(
+  () => awesome?.curriculumVitae?.information as Personal,
+)
+const summary = computed(() => awesome?.curriculumVitae?.summary as Summary)
+const summaryDetail = computed(() => {
+  const detail = summary.value?.summary
+  const type = typeof detail
+  return type === 'string' ? detail.split(';') : detail
+})
+// #endregion
+</script>
+<template>
+  <div class="mx-auto h-fit border-b border-b-gray-300">
+    <div v-if="personal">
+      <div class="">
+        <h1
+          class="leading-normal font-bold uppercase text-[48px] dark:text-primary-500"
+        >
+          {{ personal.fullName }}
+        </h1>
+        <h2 class="leading-normal text-[36px] title-blue">
+          {{ personal.position }}
+        </h2>
+      </div>
+      <div class="p-4 grid grid-cols-[1fr,300px] gap-4">
+        <div>
+          <ul>
+            <li
+              v-for="(item, index) in summaryDetail"
+              :key="index"
+              class="list-disc"
+            >
+              {{ item }}
+            </li>
+          </ul>
+        </div>
+        <div id="contact" class="space-y-4">
+          <div v-show="personal.dateOfBirth">
+            <div class="title-secondary">{{ $t('dateOfBirth') }}</div>
+            <div>{{ personal.dateOfBirth }}</div>
+          </div>
+          <div v-show="personal.age">
+            <div class="title-secondary">{{ $t('age') }}</div>
+            <div>{{ personal.age }}</div>
+          </div>
+          <div v-show="personal.email">
+            <div class="title-secondary">{{ $t('Email') }}</div>
+            <div>{{ personal.email }}</div>
+          </div>
+          <div v-show="personal.phoneNumber">
+            <div class="title-secondary">{{ $t('phone') }}</div>
+            <div>{{ personal.phoneNumber }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div v-else class="font-bold text-red underline">
+      Please add personal information in app config
+    </div>
+  </div>
+</template>

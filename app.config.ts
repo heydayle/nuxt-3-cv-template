@@ -1,9 +1,13 @@
 import type { RouteLocationRaw } from 'vue-router'
-import { NuxtApp } from '#app'
-import {
-  AwesomeLayoutPageNavbarMenu,
-  AwesomeLayoutPageNavbarMenuDropdownItem,
-} from './types'
+import type { NuxtApp } from '#app'
+import type { AwesomeLayoutPageNavbarMenu } from '~/utils/types'
+import type {
+  Personal,
+  Summary,
+  Education,
+  Project,
+  Company,
+} from '~/utils/curriculumVitae'
 
 export interface NuxtAwesomeAppConfig {
   /** title name */
@@ -65,6 +69,14 @@ export interface NuxtAwesomeAppConfig {
     }
   }
 
+  curriculumVitae?: {
+    information: Personal
+    summary?: Summary
+    workExperience: Company[] | null
+    technologies: string[] | string
+    education?: Education
+    projects: Project[] | null
+  }
   /** author config */
   disableInfoReplaceIndexInWelcomePage?: boolean
 }
@@ -77,7 +89,7 @@ declare module '@nuxt/schema' {
 
 export default defineAppConfig({
   awesome: {
-    name: 'Nuxt 3 CV template',
+    name: 'Thinh Le',
     description:
       'a starter template for Nuxt 3 with minimalist themes design, built in components, drawer & menus, and more.',
     project: {
@@ -95,7 +107,7 @@ export default defineAppConfig({
         year: new Date().getFullYear(),
       },
       welcome: {
-        title: 'Nuxt 3 CV template',
+        title: 'Thinh Le',
         disableInfoReplaceIndexInWelcomePage: true,
         primaryActionButton: {
           title: 'Nuxt 3',
@@ -116,6 +128,60 @@ export default defineAppConfig({
       },
     },
     disableInfoReplaceIndexInWelcomePage: false,
+    curriculumVitae: {
+      information: {
+        fullName: 'Le Duong Hung Thinh',
+        position: 'Front-End Developer',
+        dateOfBirth: '01/01/1999',
+        email: 'hungthinh.ckc@gmail.com',
+        phoneNumber: '00000000000',
+      },
+      summary: {
+        about: 'string',
+        summary: [
+          'Over 4 years of experience in technology, proficient in Vue JS and React JS frameworks.',
+          'Over 2 years of experience in technology, proficient in Nuxt frameworks.',
+          'Knowledge of server-side rendering and SEO optimization.',
+          'Demonstrated proficiency in developing user-centric web applications and content management systems.',
+          'Expertise in integrating and leveraging analytics tools for enhanced data insights and marketing strategies.',
+          'Specialized in optimizing web performance, particularly for mobile platforms, to enhance user experience.',
+        ],
+        // if using string, separated by semicolons(;)
+      },
+      workExperience: [
+        {
+          companyName: 'Ycomm',
+          startDate: 'March 11, 2024',
+          endDate: 'Current',
+          position: 'Front-End Developer',
+          description: '',
+          projects: 'Auto translate',
+          technologies: 'Nuxt 3, Vue 3',
+        },
+      ],
+      technologies: 'Nuxt 3, Vue 3',
+      education: {
+        title: 'Software Engeneer',
+        school: 'Cao Thang Technical College',
+        scholastic: '2017 - 2020',
+      },
+      projects: [
+        {
+          name: 'Auto Translate',
+          partner: 'Product',
+          position: 'Front-End Developer',
+          description: 'Lorem isum...',
+          startDate: 'March 11, 2024',
+          endDate: 'Current',
+          teamSize: 14,
+          developmentMethodologies: '',
+          tools: 'Webstorm',
+          technologies: 'Nuxt 3, Vue 3',
+          achievement: ['Your Result'],
+          release: 'Web production',
+        },
+      ],
+    },
   } as NuxtAwesomeAppConfig,
   nuxtIcon: {
     aliases: {},
