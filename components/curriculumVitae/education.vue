@@ -18,7 +18,7 @@ const url = useRequestURL()
           {{ $t('education') }}
         </h2>
       </div>
-      <div>
+      <div class="pl-2">
         <div class="font-bold text-2xl">{{ education.title }}</div>
         <div class="font-semibold text-gray-400">
           <span>{{ education.school }}</span>,

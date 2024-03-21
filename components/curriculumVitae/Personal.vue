@@ -34,21 +34,24 @@ useSeoMeta({
 })
 </script>
 <template>
-  <div class="mx-auto h-fit border-b border-b-gray-300">
+  <div class="mx-auto px-4 xl:px-0 h-fit border-b border-b-gray-300">
     <div v-if="personal">
       <div class="">
         <h1
-          class="leading-normal font-bold uppercase text-[48px] dark:text-primary-500"
+          class="leading-8 mt-6 font-bold uppercase text-3xl xl:text-[48px] dark:text-primary-500"
         >
           {{ personal.fullName }}
         </h1>
-        <h2 class="leading-normal text-[36px] title-blue">
+        <h2 class="leading-normal mt-0 text-2xl xl:text-[38px] title-blue">
           {{ personal.position }}
         </h2>
       </div>
-      <div class="p-4 grid grid-cols-[1fr,300px] gap-4">
+      <div class="flex flex-col-reverse xl:flex-row gap-4 mt-4">
         <div>
-          <ul>
+          <div class="leading-normal text-[32px] title-blue">
+            {{ $t('summary') }}
+          </div>
+          <ul class="p-4">
             <li
               v-for="(item, index) in summaryDetail"
               :key="index"

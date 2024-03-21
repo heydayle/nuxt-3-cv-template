@@ -10,16 +10,23 @@ const works = computed(
 const url = useRequestURL()
 </script>
 <template>
-  <div class="mx-auto h-fit mt-4 border-b border-b-gray-300">
+  <div class="mx-auto px-4 xl:px-0 h-fit mt-4 border-b border-b-gray-300">
     <div v-if="works">
       <div class="">
         <h2 class="leading-normal text-[32px] title-blue">
           {{ $t('projects') }}
         </h2>
       </div>
-      <div class="p-4 grid grid-cols-2 gap-4">
-        <div v-for="(item, index) in works" :key="index" class="max-w-[600px]">
-          <p class="font-bold text-2xl">{{ item.position }}</p>
+      <div class="p-4 grid grid-cols-1 xl:grid-cols-2 gap-4">
+        <div
+          v-for="(item, index) in works"
+          :key="index"
+          :class="{
+            'border-b border-b-white pb-4 xl:border-b-0':
+              index !== works.length - 1,
+          }"
+        >
+          <p class="font-bold text-xl xl:text-2xl">{{ item.position }}</p>
           <p class="mb-2 font-semibold text-gray-400">
             <span>{{ item.companyName }}</span
             >, <span>{{ item.startDate }}</span> -
@@ -41,13 +48,15 @@ const url = useRequestURL()
           </div>
           <div>
             <span class="font-semibold">{{ $t('Technologies') }}: </span>
-            <span class="whitespace-pre-wrap break-all">{{ item.technologies }}</span>
+            <span class="whitespace-pre-wrap break-all">{{
+              item.technologies
+            }}</span>
           </div>
         </div>
       </div>
     </div>
     <div v-else class="font-bold text-red underline">
-      Please add work experience in app config
+      Please add projects in app config
     </div>
   </div>
 </template>
