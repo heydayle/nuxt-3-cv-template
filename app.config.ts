@@ -150,18 +150,71 @@ export default defineAppConfig({
       },
       workExperience: [
         {
-          companyName: 'Ycomm',
-          startDate: 'March 11, 2024',
-          endDate: 'Current',
+          companyName: 'Yoong Solutions',
+          startDate: 'Jan 2022',
+          endDate: 'Feb 2024',
           position: 'Front-End Developer',
-          description: '',
-          projects: 'Auto translate',
-          technologies: 'Nuxt 3, Vue 3',
+          description: [
+            'Main development in Dragon Capital and HKT Group projects.',
+            'Mentor and main development in Visit Nha Trang Bay and 25 FIT project.',
+          ],
+          projects:
+            'CRM Dragon Capital, HKT GROUP, Visit Nha Trang Bay, 25 FIT.',
+          technologies:
+            'Vue, Nuxt, HTML, SCSS, Tailwind CSS, Vuetify, Element UI, Tailwind CSS, and RESTful API.',
+        },
+        {
+          companyName: 'Yoong Solutions',
+          startDate: 'Jan 2022',
+          endDate: 'Feb 2024',
+          position: 'Front-End Developer',
+          description: [
+            'Main development in Dragon Capital and HKT Group projects.',
+            'Mentor and main development in Visit Nha Trang Bay and 25 FIT project.',
+          ],
+          projects:
+            'CRM Dragon Capital, HKT GROUP, Visit Nha Trang Bay, 25 FIT.',
+          technologies:
+            'Vue, Nuxt, HTML, SCSS, Tailwind CSS, Vuetify, Element UI, Tailwind CSS, and RESTful API.',
+        },
+        {
+          companyName: 'Yoong Solutions',
+          startDate: 'Jan 2022',
+          endDate: 'Feb 2024',
+          position: 'Front-End Developer',
+          description: [
+            'Main development in Dragon Capital and HKT Group projects.',
+            'Mentor and main development in Visit Nha Trang Bay and 25 FIT project.',
+          ],
+          projects:
+            'CRM Dragon Capital, HKT GROUP, Visit Nha Trang Bay, 25 FIT.',
+          technologies:
+            'Vue, Nuxt, HTML, SCSS, Tailwind CSS, Vuetify, Element UI, Tailwind CSS, and RESTful API.',
+        },
+        {
+          companyName: 'Yoong Solutions',
+          startDate: 'Jan 2022',
+          endDate: 'Feb 2024',
+          position: 'Front-End Developer',
+          description: [
+            'Main development in Dragon Capital and HKT Group projects.',
+            'Mentor and main development in Visit Nha Trang Bay and 25 FIT project.',
+          ],
+          projects:
+            'CRM Dragon Capital, HKT GROUP, Visit Nha Trang Bay, 25 FIT.',
+          technologies:
+            'Vue, Nuxt, HTML, SCSS, Tailwind CSS, Vuetify, Element UI, Tailwind CSS, and RESTful API.',
         },
       ],
-      technologies: 'Nuxt 3, Vue 3',
+      technologies: [
+        'Programming languages: Javascript, Typescript, HTML, SASS',
+        'Frameworks/ Platforms: Vue JS, Vuetify, Element UI, Tailwind, Bootstrap, NUXT, React JS, Redux, React Native',
+        'Database: MongoDB, Azure SQL, My SQL',
+        'Version Control: Git (Gitlab & Github & Azure Devops)',
+        'Others: Firebase',
+      ],
       education: {
-        title: 'Software Engeneer',
+        title: 'Bachelor of Information Technology',
         school: 'Cao Thang Technical College',
         scholastic: '2017 - 2020',
       },
