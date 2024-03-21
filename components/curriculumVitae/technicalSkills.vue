@@ -6,10 +6,9 @@ const technologies = computed(
   () => awesome?.curriculumVitae?.technologies as string[],
 )
 // #endregion
-const url = useRequestURL()
 </script>
 <template>
-  <div class="h-fit">
+  <div class="h-fit xl:max-w-[600px]">
     <div v-if="technologies">
       <div class="">
         <h2 class="leading-normal text-[32px] title-blue">

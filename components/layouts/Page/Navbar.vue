@@ -60,6 +60,13 @@ const showDrawer = ref(false)
           >
             <Icon name="mdi:github-face" />
           </AwesomeLink>
+          <AwesomeLink
+            v-if="awesome?.project?.links?.linkedin"
+            class="dark:text-gray-400 text-gray-600"
+            :href="awesome?.project?.links?.linkedin"
+          >
+            <Icon name="mdi:linkedin" />
+          </AwesomeLink>
         </div>
       </div>
       <!-- drawer:btn -->
@@ -86,9 +93,6 @@ const showDrawer = ref(false)
       @close="() => (showDrawer = false)"
     >
       <AwesomeActionSheetGroup>
-        <AwesomeActionSheetHeader>
-          <AwesomeActionSheetHeaderTitle text="Menu" />
-        </AwesomeActionSheetHeader>
         <!-- dynamic menus -->
         <AwesomeActionSheetItem>
           <div
@@ -192,6 +196,12 @@ const showDrawer = ref(false)
         >
           <Icon name="mdi:github-face" class="text-lg font-bold" />
           <span class="text-sm">Github</span>
+        </AwesomeActionSheetItemButton>
+        <AwesomeActionSheetItemButton
+          class="flex justify-center items-center text-base space-x-2"
+        >
+          <Icon name="mdi:linkedin" class="text-lg font-bold" />
+          <span class="text-sm">LinkedIn</span>
         </AwesomeActionSheetItemButton>
       </AwesomeActionSheetGroup>
     </AwesomeActionSheet>

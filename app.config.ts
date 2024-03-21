@@ -95,6 +95,7 @@ export default defineAppConfig({
     project: {
       links: {
         github: 'https://thinh.io.vn',
+        linkedin: 'https://www.linkedin.com/in/thinhle99',
       },
     },
     layout: {
@@ -123,8 +124,8 @@ export default defineAppConfig({
       name: 'heyday',
       links: {
         github: 'https://github.com/heydayle',
-        medium: 'https://viandwi24.medium.com',
         website: 'https://thinh.io.vn',
+        linkedin: 'https://www.linkedin.com/in/thinhle99',
       },
     },
     disableInfoReplaceIndexInWelcomePage: false,
@@ -132,8 +133,8 @@ export default defineAppConfig({
       information: {
         fullName: 'Le Duong Hung Thinh',
         position: 'Front-End Developer',
-        dateOfBirth: '01/01/1999',
-        email: 'hungthinh.ckc@gmail.com',
+        dateOfBirth: '00/00/0000',
+        email: 'abcxyz@gmail.com',
         phoneNumber: '00000000000',
       },
       summary: {
