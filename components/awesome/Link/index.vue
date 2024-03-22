@@ -32,6 +32,7 @@ const to = toRef(props, 'to')
     v-else-if="!href"
     :class="`transition-colors duration-300 dark:hover:text-white hover:text-gray-900 hover:underline`"
     href="#"
+    title="Home"
   >
     <slot>{{ text }}</slot>
   </a>

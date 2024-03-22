@@ -34,9 +34,9 @@ useSeoMeta({
 })
 </script>
 <template>
-  <div class="mx-auto px-4 xl:px-0 h-fit border-b border-b-gray-300">
+  <div class="mx-auto pb-4 px-4 2xl:px-0 h-fit border-b border-b-gray-300">
     <div v-if="personal">
-      <div class="">
+      <div class="sticky top-0">
         <h1
           class="leading-8 mt-6 font-bold uppercase text-3xl xl:text-[48px] dark:text-primary-500"
         >

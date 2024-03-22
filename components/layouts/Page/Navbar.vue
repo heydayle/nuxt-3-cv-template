@@ -9,14 +9,13 @@ const menus = computed(
     (awesome?.layout?.page?.navbar?.menus ||
       []) as AwesomeLayoutPageNavbarMenu[],
 )
-
 // drawer
 const showDrawer = ref(false)
 </script>
 
 <template>
   <header
-    class="flex fixed backdrop-filter backdrop-blur-md top-0 z-40 w-full flex-none transition-colors duration-300 lg:z-50 border-b border-gray-950/10 dark:border-gray-50/[0.2] bg-white/[0.5] dark:bg-gray-950/[0.5]"
+    class="flex sticky backdrop-filter backdrop-blur-md top-0 z-40 w-full flex-none transition-colors duration-300 lg:z-50 border-b border-gray-950/10 dark:border-gray-50/[0.2] bg-white/[0.5] dark:bg-gray-950/[0.5]"
   >
     <!-- content -->
     <div
@@ -25,7 +24,11 @@ const showDrawer = ref(false)
       <!-- title -->
       <div>
         <slot name="title">
-          <NuxtLink to="/" class="font-bold text-lg text-primary-500">
+          <NuxtLink
+            to="/"
+            title="Home"
+            class="font-bold text-lg text-primary-500"
+          >
             <Icon
               name="simple-icons:nuxtdotjs"
               class="font-black text-xl font-mono mr-2 inline-block"
@@ -57,6 +60,7 @@ const showDrawer = ref(false)
             v-if="awesome?.project?.links?.github"
             class="dark:text-gray-400 text-gray-600"
             :href="awesome?.project?.links?.github"
+            title="github"
           >
             <Icon name="mdi:github-face" />
           </AwesomeLink>
@@ -64,6 +68,7 @@ const showDrawer = ref(false)
             v-if="awesome?.project?.links?.linkedin"
             class="dark:text-gray-400 text-gray-600"
             :href="awesome?.project?.links?.linkedin"
+            title="linkedin"
           >
             <Icon name="mdi:linkedin" />
           </AwesomeLink>

@@ -10,7 +10,7 @@ const works = computed(
 const url = useRequestURL()
 </script>
 <template>
-  <div class="mx-auto px-4 xl:px-0 h-fit mt-4 border-b border-b-gray-300">
+  <div class="mx-auto px-4 2xl:px-0 h-fit mt-4 border-b border-b-gray-300">
     <div v-if="works">
       <div class="">
         <h2 class="leading-normal text-[32px] title-blue">
