@@ -5,7 +5,7 @@ The Nuxt CV Template is a simple CV designed to help you present essential infor
 All you need to do is fill in the correct information within the variables configured in the `app.config.ts` file. After that, you simply need to deploy it to your domain to see the results.
 
 
-- 📖&nbsp; [Demo](https://nnuxtcvtemplate.vercel.app/)
+- 📖&nbsp; [Demo](https://nuxtcvtemplate.vercel.app/)
 
 > **NOTES**
 >
