@@ -32,7 +32,7 @@ export interface Project {
   startDate: string
   endDate?: string
   partner?: string | 'Product'
-  description?: string
+  description?: string[]
   teamSize?: string | number
   position: string
   developmentMethodologies?: string[] | string

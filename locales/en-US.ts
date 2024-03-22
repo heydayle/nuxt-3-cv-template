@@ -8,4 +8,9 @@ export default {
   projects: 'Projects',
   technicalSkills: 'Technical Skills',
   education: 'Education',
+  teamSize: 'Team size',
+  tools: 'Tools',
+  technologies: 'Technologies',
+  achievement: 'Achievement',
+  release: 'Release',
 }

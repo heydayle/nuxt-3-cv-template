@@ -89,12 +89,12 @@ declare module '@nuxt/schema' {
 
 export default defineAppConfig({
   awesome: {
-    name: 'Thinh Le',
+    name: 'CV Template',
     description:
       'a starter template for Nuxt 3 with minimalist themes design, built in components, drawer & menus, and more.',
     project: {
       links: {
-        github: 'https://thinh.io.vn',
+        github: 'https://github.com/heydayle',
         linkedin: 'https://www.linkedin.com/in/thinhle99',
       },
     },
@@ -131,11 +131,11 @@ export default defineAppConfig({
     disableInfoReplaceIndexInWelcomePage: false,
     curriculumVitae: {
       information: {
-        fullName: 'Le Duong Hung Thinh',
-        position: 'Front-End Developer',
-        dateOfBirth: '00/00/0000',
-        email: 'abcxyz@gmail.com',
-        phoneNumber: '00000000000',
+        fullName: 'Nuxt 3 CV Template',
+        position: 'by Heyday Lê',
+        dateOfBirth: '10/03/2024',
+        email: 'tatheyday@gmail.com',
+        phoneNumber: '(+84) 6969696969',
       },
       summary: {
         about: 'string',
@@ -151,64 +151,47 @@ export default defineAppConfig({
       },
       workExperience: [
         {
-          companyName: 'Yoong Solutions',
+          companyName: 'Heyday Technologies',
           startDate: 'Jan 2022',
           endDate: 'Feb 2024',
           position: 'Front-End Developer',
           description: [
-            'Main development in Dragon Capital and HKT Group projects.',
-            'Mentor and main development in Visit Nha Trang Bay and 25 FIT project.',
+            'Main development in Nuxt 3 CV Template projects.',
+            'Mentor and main development in Nuxt 3 CV Template project.',
           ],
-          projects:
-            'CRM Dragon Capital, HKT GROUP, Visit Nha Trang Bay, 25 FIT.',
+          projects: 'Nuxt 3 CV Template',
           technologies:
-            'Vue, Nuxt, HTML, SCSS, Tailwind CSS, Vuetify, Element UI, Tailwind CSS, and RESTful API.',
+            'Vue 3, Nuxt 3, HTML, SCSS, Tailwind CSS, Vuetify, Element UI, Tailwind CSS, and RESTful API.',
         },
         {
-          companyName: 'Yoong Solutions',
+          companyName: 'Heyday Technologies',
           startDate: 'Jan 2022',
           endDate: 'Feb 2024',
           position: 'Front-End Developer',
           description: [
-            'Main development in Dragon Capital and HKT Group projects.',
-            'Mentor and main development in Visit Nha Trang Bay and 25 FIT project.',
+            'Main development in Nuxt 3 CV Template projects.',
+            'Mentor and main development in Nuxt 3 CV Template project.',
           ],
-          projects:
-            'CRM Dragon Capital, HKT GROUP, Visit Nha Trang Bay, 25 FIT.',
+          projects: 'Nuxt 3 CV Template',
           technologies:
-            'Vue, Nuxt, HTML, SCSS, Tailwind CSS, Vuetify, Element UI, Tailwind CSS, and RESTful API.',
+            'Vue 3, Nuxt 3, HTML, SCSS, Tailwind CSS, Vuetify, Element UI, Tailwind CSS, and RESTful API.',
         },
         {
-          companyName: 'Yoong Solutions',
+          companyName: 'Heyday Technologies',
           startDate: 'Jan 2022',
           endDate: 'Feb 2024',
           position: 'Front-End Developer',
           description: [
-            'Main development in Dragon Capital and HKT Group projects.',
-            'Mentor and main development in Visit Nha Trang Bay and 25 FIT project.',
+            'Main development in Nuxt 3 CV Template projects.',
+            'Mentor and main development in Nuxt 3 CV Template project.',
           ],
-          projects:
-            'CRM Dragon Capital, HKT GROUP, Visit Nha Trang Bay, 25 FIT.',
+          projects: 'Nuxt 3 CV Template',
           technologies:
-            'Vue, Nuxt, HTML, SCSS, Tailwind CSS, Vuetify, Element UI, Tailwind CSS, and RESTful API.',
-        },
-        {
-          companyName: 'Yoong Solutions',
-          startDate: 'Jan 2022',
-          endDate: 'Feb 2024',
-          position: 'Front-End Developer',
-          description: [
-            'Main development in Dragon Capital and HKT Group projects.',
-            'Mentor and main development in Visit Nha Trang Bay and 25 FIT project.',
-          ],
-          projects:
-            'CRM Dragon Capital, HKT GROUP, Visit Nha Trang Bay, 25 FIT.',
-          technologies:
-            'Vue, Nuxt, HTML, SCSS, Tailwind CSS, Vuetify, Element UI, Tailwind CSS, and RESTful API.',
+            'Vue 3, Nuxt 3, HTML, SCSS, Tailwind CSS, Vuetify, Element UI, Tailwind CSS, and RESTful API.',
         },
       ],
       technologies: [
-        'Programming languages: Javascript, Typescript, HTML, SASS',
+        'Programming languages: Javascript, Typescript, HTML, CSS, SASS',
         'Frameworks/ Platforms: Vue JS, Vuetify, Element UI, Tailwind, Bootstrap, NUXT, React JS, Redux, React Native',
         'Database: MongoDB, Azure SQL, My SQL',
         'Version Control: Git (Gitlab & Github & Azure Devops)',
@@ -216,23 +199,25 @@ export default defineAppConfig({
       ],
       education: {
         title: 'Bachelor of Information Technology',
-        school: 'Cao Thang Technical College',
+        school: 'School Technical College',
         scholastic: '2017 - 2020',
       },
       projects: [
         {
-          name: 'Auto Translate',
+          name: 'Nuxt 3 CV Template',
           partner: 'Product',
           position: 'Front-End Developer',
-          description: 'Lorem isum...',
-          startDate: 'March 11, 2024',
+          description: [
+            'The Nuxt CV Template is a simple CV designed to help you present essential information including Personal Information, Summary, Work Experience, Skills, Education, Projects, etc. Employers can use this template to evaluate and assess your overall capabilities.',
+          ],
+          startDate: 'March 10, 2024',
           endDate: 'Current',
-          teamSize: 14,
+          teamSize: 1,
           developmentMethodologies: '',
           tools: 'Webstorm',
-          technologies: 'Nuxt 3, Vue 3',
-          achievement: ['Your Result'],
-          release: 'Web production',
+          technologies: 'Vue 3, Nuxt 3, HTML, SCSS, Tailwind CSS',
+          achievement: ['Nuxt 3 CV Template'],
+          release: 'Nuxt 3 CV Template production',
         },
       ],
     },
