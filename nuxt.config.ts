@@ -38,7 +38,10 @@ export default defineNuxtConfig({
     '@nuxt/content',
     // locale
     '@nuxtjs/i18n',
-
+    // hydration
+    'nuxt-delay-hydration',
+    // robot
+    ['@nuxtjs/robots', { configPath: '~/config/robots.config' }],
     // todo: feat/localization
     // '@nuxtjs/i18n'
   ],
@@ -109,6 +112,9 @@ export default defineNuxtConfig({
     langDir: 'locales/',
     detectBrowserLanguage: false,
     reloadOnLanguageChange: false,
+  },
+  delayHydration: {
+    mode: 'init',
   },
   // todo: feat/localization
   // module::i18n

@@ -12,14 +12,16 @@ useHead({ titleTemplate: '', title: awesome?.name || 'Nuxt 3 Awesome Starter' })
 
 <template>
   <div class="mx-auto w-screen xl:w-auto">
-    <Personal />
-    <WorkExperience />
-    <div
-      class="py-4 px-4 2xl:px-0 grid grid-cols-1 xl:grid-cols-2 gap-4 border-b border-b-gray-300"
-    >
-      <TechnicalSkills />
-      <Education />
-    </div>
-    <Projects />
+    <DelayHydration>
+      <Personal />
+      <WorkExperience />
+      <div
+        class="py-4 px-4 2xl:px-0 grid grid-cols-1 xl:grid-cols-2 gap-4 border-b border-b-gray-300"
+      >
+        <TechnicalSkills />
+        <Education />
+      </div>
+      <Projects />
+    </DelayHydration>
   </div>
 </template>

@@ -18,6 +18,7 @@ const summaryDetail = computed(() => {
 // #endregion
 const url = useRequestURL()
 useSeoMeta({
+  'google-site-verification': process.env.GG_SEARCH_CONSOLE,
   title: personal.value.fullName || 'CV',
   description: summaryDetail.value.join(' '),
   ogType: 'website',
