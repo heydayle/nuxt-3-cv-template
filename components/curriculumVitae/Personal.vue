@@ -50,7 +50,7 @@ useSeoMeta({
         </h2>
       </div>
       <div class="flex flex-col-reverse xl:flex-row gap-4 mt-4">
-        <div>
+        <div class="max-w-[620px]">
           <div class="leading-normal text-[32px] title-blue">
             {{ $t('summary') }}
           </div>

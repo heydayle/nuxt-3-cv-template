@@ -7,10 +7,9 @@ All you need to do is fill in the correct information within the variables confi
 
 - 📖&nbsp; [Demo](https://nuxtcvtemplate.vercel.app/)
 
-#### Using with Direct Clone
+#### Using with Direct Clone or Fork
 
-You can direct to clone this repository.
-
+### Installation
 - clone this repository
   ```bash
   git clone https://github.com/heydayle/nuxt-3-cv-template
@@ -25,13 +24,14 @@ You can direct to clone this repository.
   ```
 ### After installing, you should:
 
->- Update property `curriculumVitae` in `app.config.ts` (Full language)
->- Update `thumbnail.png` (overwrite image, don't change name) in folder `./public`
+>- Update properties `curriculumVitae` in `app.config.ts`
+>- Turn-off property `isDemo` in `app.config.ts`
+>- Update `thumbnail.png` file (overwrite image, don't change name) in folder `./public`
 
-> **NOTES**
+**NOTES**
 >
 > - This project using "pnpm" or "bun" as package manager
-> - Support locales (default: en, vi; You can add new language in `nuxt.config.ts` with [i18n](https://i18n.nuxtjs.org/docs/))
+> - Support locales (default: English and Vietnamese), You can add new language in `nuxt.config.ts` with [i18n](https://i18n.nuxtjs.org/docs/))
 > - Support SSR and SEO
 > - The og:title of socials sharing using `Fullname`
 > - The og:description of socials sharing using `Summary`

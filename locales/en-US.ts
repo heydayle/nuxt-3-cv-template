@@ -14,4 +14,6 @@ export default {
   achievement: 'Achievement',
   release: 'Release',
   switchLanguage: 'Switch language',
+  doYouWantToUse: 'Do you want to use this template?',
+  tryNow: 'Get template',
 }

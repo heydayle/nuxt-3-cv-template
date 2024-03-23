@@ -116,6 +116,9 @@ export default defineAppConfig({
       },
       footer: {
         year: new Date().getFullYear(),
+        isDemo: true,
+        isActive: true,
+        link: 'https://github.com/heydayle/nuxt-3-cv-template',
       },
       welcome: {
         title: 'Thinh Le',

@@ -14,4 +14,6 @@ export default {
   achievement: 'Thành tựu',
   release: 'Phát hành',
   switchLanguage: 'Đổi ngôn ngữ',
+  doYouWantToUse: 'Bạn có muốn dùng mẫu này không?',
+  tryNow: 'Dùng ngay',
 }
