@@ -2,6 +2,7 @@
 // #region [Data]
 import type { Personal, Summary } from '~/utils/curriculumVitae'
 
+const nuxtApp = useNuxtApp()
 const { awesome } = useAppConfig()
 const { locale } = useI18n()
 const personal = computed(
@@ -18,6 +19,10 @@ const summaryDetail = computed(() => {
 // #endregion
 const url = useRequestURL()
 useSeoMeta({
+  'content-language': locale.value,
+  'theme-color': nuxtApp.$colorMode.preference,
+  language: locale.code,
+  googlebot: 'CV template, ' + summaryDetail.value.join(' '),
   'google-site-verification': process.env.GG_SEARCH_CONSOLE,
   title: personal.value.fullName || 'CV',
   description: summaryDetail.value.join(' '),

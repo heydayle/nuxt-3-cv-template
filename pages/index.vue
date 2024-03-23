@@ -6,8 +6,31 @@ import Education from '~/components/curriculumVitae/education.vue'
 import Projects from '~/components/curriculumVitae/projects.vue'
 
 const { awesome } = useAppConfig()
+const { locale } = useI18n()
 definePageMeta({ layout: 'page' })
-useHead({ titleTemplate: '', title: awesome?.name || 'Nuxt 3 Awesome Starter' })
+const html = {
+  lang: locale.value,
+}
+const linkData = [
+  {
+    rel: 'canonical',
+    href: `https://nuxtcvtemplate.vercel.app/`,
+  },
+  {
+    rel: 'icon',
+    type: 'image/ico',
+    href: '/favicon.ico',
+  },
+  {
+    rel: 'image_src',
+    href: '/thumbnail.png',
+  },
+]
+useHead({
+  title: awesome?.name || 'Nuxt 3 Awesome Starter',
+  htmlAttrs: html,
+  link: linkData,
+})
 </script>
 
 <template>

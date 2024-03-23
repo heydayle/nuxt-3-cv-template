@@ -21,15 +21,11 @@ onMounted(() => {
           class="fixed flex px-4 bottom-0 duration-[1000ms] items-center h-20 bg-white/5 transition-all w-full backdrop-filter backdrop-blur-2xl"
         >
           <div class="absolute -top-6 transform -translate-x-1/2 left-1/2">
-            <AwesomeButton
-              type="none"
-              size="xs"
-              class="border-0"
-              title="hidden"
+            <button
               @click="isActive = !isActive"
             >
               <Icon name="mdi:keyboard-arrow-down" class="text-xl" />
-            </AwesomeButton>
+            </button>
           </div>
           <div
             class="flex text-sm sm:text-lg justify-center items-center space-x-4 max-w-screen-2xl mx-auto"
@@ -49,15 +45,11 @@ onMounted(() => {
       <Transition name="try-it">
         <div v-if="!isActive" class="fixed bottom-0 w-full items-center">
           <div class="absolute -top-6 transform -translate-x-1/2 left-1/2">
-            <AwesomeButton
-              type="none"
-              size="xs"
-              class="border-0"
-              title="hidden"
+            <button
               @click="isActive = !isActive"
             >
               <Icon name="mdi:keyboard-arrow-up" class="text-xl" />
-            </AwesomeButton>
+            </button>
           </div>
         </div>
       </Transition>
