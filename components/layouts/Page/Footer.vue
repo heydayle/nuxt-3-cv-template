@@ -53,6 +53,7 @@ onMounted(() => {
               type="none"
               size="xs"
               class="border-0"
+              title="hidden"
               @click="isActive = !isActive"
             >
               <Icon name="mdi:keyboard-arrow-up" class="text-xl" />
