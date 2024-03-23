@@ -3,10 +3,13 @@
 import type { Personal, Summary } from '~/utils/curriculumVitae'
 
 const { awesome } = useAppConfig()
+const { locale } = useI18n()
 const personal = computed(
-  () => awesome?.curriculumVitae?.information as Personal,
+  () => awesome?.curriculumVitae[locale.value].information as Personal,
 )
-const summary = computed(() => awesome?.curriculumVitae?.summary as Summary)
+const summary = computed(
+  () => awesome?.curriculumVitae[locale.value]?.summary as Summary,
+)
 const summaryDetail = computed(() => {
   const detail = summary.value?.summary
   const type = typeof detail
@@ -61,7 +64,7 @@ useSeoMeta({
             </li>
           </ul>
         </div>
-        <div id="contact" class="space-y-4">
+        <div id="contact" class="space-y-4 min-w-[600px]">
           <div v-show="personal.dateOfBirth">
             <div class="title-secondary">{{ $t('dateOfBirth') }}</div>
             <div>{{ personal.dateOfBirth }}</div>

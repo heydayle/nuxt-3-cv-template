@@ -2,8 +2,9 @@
 // #region [Data]
 
 const { awesome } = useAppConfig()
+const { locale } = useI18n()
 const technologies = computed(
-  () => awesome?.curriculumVitae?.technologies as string[],
+  () => awesome?.curriculumVitae[locale.value]?.technologies as string[],
 )
 // #endregion
 </script>

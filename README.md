@@ -7,11 +7,6 @@ All you need to do is fill in the correct information within the variables confi
 
 - 📖&nbsp; [Demo](https://nuxtcvtemplate.vercel.app/)
 
-> **NOTES**
->
-> - This Project using "pnpm" or "bun" as package manager
-> - Support SSR and SEO
-
 #### Using with Direct Clone
 
 You can direct to clone this repository.
@@ -28,9 +23,16 @@ You can direct to clone this repository.
   ```bash
   pnpm dev
   ```
-#### After installing, you should:
+### After installing, you should:
 
->- Update `app.config.ts`
->- The og:title of socials sharing using `Fullname`
->- The og:description of socials sharing using `Summary`
+>- Update property `curriculumVitae` in `app.config.ts` (Full language)
 >- Update `thumbnail.png` (overwrite image, don't change name) in folder `./public`
+
+> **NOTES**
+>
+> - This project using "pnpm" or "bun" as package manager
+> - Support locales (default: en, vi; You can add new language in `nuxt.config.ts` with [i18n](https://i18n.nuxtjs.org/docs/))
+> - Support SSR and SEO
+> - The og:title of socials sharing using `Fullname`
+> - The og:description of socials sharing using `Summary`
+> - You can change these others info in `app.config.ts`

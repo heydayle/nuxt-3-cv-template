@@ -3,12 +3,13 @@
 import type { Project } from '~/utils/curriculumVitae'
 
 const { awesome } = useAppConfig()
-const projects = computed(() => awesome?.curriculumVitae?.projects as Project)
+const { locale } = useI18n()
+const projects = computed(() => awesome?.curriculumVitae[locale.value]?.projects as Project)
 // #endregion
 const url = useRequestURL()
 </script>
 <template>
-  <div class="mx-auto px-4 2xl:px-0 h-fit mt-4 border-b border-b-gray-300">
+  <div class="mx-auto px-4 2xl:px-0 h-fit mt-4">
     <div v-if="projects">
       <div class="">
         <h2 class="leading-normal text-[32px] title-blue">

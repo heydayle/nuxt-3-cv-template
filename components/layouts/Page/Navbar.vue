@@ -11,6 +11,12 @@ const menus = computed(
 )
 // drawer
 const showDrawer = ref(false)
+const { locales, locale } = useI18n()
+const switchLocalePath = useSwitchLocalePath()
+
+const availableLocales = computed(() => {
+  return locales.value.find((i) => i.code !== locale.value)
+})
 </script>
 
 <template>
@@ -52,9 +58,13 @@ const showDrawer = ref(false)
         <!-- others -->
         <div class="pl-4 flex space-x-3 text-xl">
           <!-- todo: feat/localization -->
-          <!-- <AwesomeLink class="text-gray-400 hover:text-gray-100">
+          <AwesomeLink
+            class="text-gray-400 hover:text-gray-100"
+            :title="$t('switchLanguage')"
+            :to="switchLocalePath(availableLocales.code)"
+          >
             <Icon name="la:language" />
-          </AwesomeLink> -->
+          </AwesomeLink>
           <LayoutPageNavbarDropdownThemeSwitcher />
           <AwesomeLink
             v-if="awesome?.project?.links?.github"

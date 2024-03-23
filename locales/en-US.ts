@@ -13,4 +13,5 @@ export default {
   technologies: 'Technologies',
   achievement: 'Achievement',
   release: 'Release',
+  switchLanguage: 'Switch language',
 }

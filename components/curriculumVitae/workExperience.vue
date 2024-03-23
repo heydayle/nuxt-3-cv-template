@@ -3,8 +3,9 @@
 import type { Company } from '~/utils/curriculumVitae'
 
 const { awesome } = useAppConfig()
+const { locale } = useI18n()
 const works = computed(
-  () => awesome?.curriculumVitae?.workExperience as Company[],
+  () => awesome?.curriculumVitae[locale.value]?.workExperience as Company[],
 )
 // #endregion
 const url = useRequestURL()
@@ -48,7 +49,7 @@ const url = useRequestURL()
             <span>{{ item.projects }}</span>
           </div>
           <div>
-            <span class="font-semibold">{{ $t('Technologies') }}: </span>
+            <span class="font-semibold">{{ $t('technologies') }}: </span>
             <span class="whitespace-pre-wrap break-all">{{
               item.technologies
             }}</span>

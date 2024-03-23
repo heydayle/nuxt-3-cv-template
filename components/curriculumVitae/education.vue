@@ -4,8 +4,9 @@
 import type { Education } from "~/utils/curriculumVitae";
 
 const { awesome } = useAppConfig()
+const { locale } = useI18n()
 const education = computed(
-  () => awesome?.curriculumVitae?.education as Education,
+  () => awesome?.curriculumVitae[locale.value]?.education as Education,
 )
 // #endregion
 const url = useRequestURL()
