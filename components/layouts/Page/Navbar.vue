@@ -57,14 +57,7 @@ const availableLocales = computed(() => {
         </div>
         <!-- others -->
         <div class="pl-4 flex space-x-3 text-xl">
-          <!-- todo: feat/localization -->
-          <AwesomeLink
-            class="text-gray-400 hover:text-gray-100"
-            :title="$t('switchLanguage')"
-            :to="switchLocalePath(availableLocales.code)"
-          >
-            <Icon name="la:language" />
-          </AwesomeLink>
+          <LayoutPageNavbarDropdownLanguageSwitcher />
           <LayoutPageNavbarDropdownThemeSwitcher />
           <AwesomeLink
             v-if="awesome?.project?.links?.github"
@@ -194,6 +187,14 @@ const availableLocales = computed(() => {
                 </div>
               </template>
             </template>
+          </div>
+        </AwesomeActionSheetItem>
+        <AwesomeActionSheetItem class="flex flex-col">
+          <div class="pb-2">
+            <div class="mt-2 mb-2 text-sm font-bold capitalize">
+              Change Language
+            </div>
+            <LayoutPageNavbarDropdownLanguageSwitcher type="select-box" />
           </div>
         </AwesomeActionSheetItem>
         <AwesomeActionSheetItem class="flex flex-col">

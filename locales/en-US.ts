@@ -15,5 +15,5 @@ export default {
   release: 'Release',
   switchLanguage: 'Switch language',
   doYouWantToUse: 'Do you want to use this template?',
-  tryNow: 'Get template',
+  tryNow: 'Get Template',
 }

@@ -4,7 +4,9 @@ import type { Project } from '~/utils/curriculumVitae'
 
 const { awesome } = useAppConfig()
 const { locale } = useI18n()
-const projects = computed(() => awesome?.curriculumVitae[locale.value]?.projects as Project)
+const projects = computed(
+  () => awesome?.curriculumVitae[locale.value]?.projects as Project,
+)
 // #endregion
 const url = useRequestURL()
 </script>
@@ -37,9 +39,11 @@ const url = useRequestURL()
           </div>
           <div v-if="item.description">
             <div class="font-semibold">{{ $t('description') }}:</div>
-            <div class="px-2">
-              <li v-for="desc in item.description">{{ desc }}</li>
-            </div>
+            <ul class="px-4">
+              <li v-for="desc in item.description" class="list-disc">
+                {{ desc }}
+              </li>
+            </ul>
           </div>
           <div v-if="item.teamSize">
             <span class="font-semibold">{{ $t('teamSize') }}:</span>
@@ -61,9 +65,11 @@ const url = useRequestURL()
           </div>
           <div v-if="item.achievement">
             <div class="font-semibold">{{ $t('achievement') }}:</div>
-            <div class="px-2">
-              <li v-for="achiev in item.achievement">{{ achiev }}</li>
-            </div>
+            <ul class="px-4">
+              <li v-for="achiev in item.achievement" class="list-disc">
+                {{ achiev }}
+              </li>
+            </ul>
           </div>
           <div v-if="item.release">
             <span class="font-semibold">{{ $t('release') }}:</span>

@@ -108,7 +108,7 @@ export default defineNuxtConfig({
       },
     ],
     defaultLocale: 'en',
-    lazy: true,
+    lazy: false,
     langDir: 'locales/',
     detectBrowserLanguage: false,
     reloadOnLanguageChange: false,
