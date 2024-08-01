@@ -12,7 +12,7 @@ All you need to do is fill in the correct information within the variables confi
 ### Installation
 - clone this repository
   ```bash
-  git clone https://github.com/heydayle/nuxt-3-cv-template
+  gh repo fork https://github.com/heydayle/nuxt-3-cv-template --clone
   ```
 - install dependencies
   ```bash
