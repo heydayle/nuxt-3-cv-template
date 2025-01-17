@@ -116,6 +116,11 @@ export default defineNuxtConfig({
   delayHydration: {
     mode: 'init',
   },
+  build: {
+    rollupOptions: {
+      external: ['vue-router']
+    }
+  }
   // todo: feat/localization
   // module::i18n
   // i18n: {
