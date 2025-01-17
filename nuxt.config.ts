@@ -116,9 +116,11 @@ export default defineNuxtConfig({
   delayHydration: {
     mode: 'init',
   },
-  build: {
-    rollupOptions: {
-      external: ['vue-router']
+  vite: {
+    resolve: {
+      alias: {
+        'vue-router': 'vue-router/dist/vue-router.esm-bundler.js'
+      }
     }
   }
   // todo: feat/localization
