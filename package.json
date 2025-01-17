@@ -1,5 +1,5 @@
 {
-  "name": "@nuxt-awesome/theme",
+  "name": "cv",
   "version": "2.0.12",
   "description": "a Nuxt 3 template and boilerplate with a lot of useful features. Nuxt 3 + Tailwindcss + Nuxt Layer",
   "author": "viandwi24",
@@ -7,10 +7,6 @@
   "license": "MIT",
   "type": "module",
   "main": "./nuxt.config.ts",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/viandwi24/nuxt3-awesome-starter"
-  },
   "files": [
     "assets",
     "components",
@@ -51,11 +47,11 @@
     "nuxt-headlessui": "^1.1.4",
     "nuxt-icon": "^0.6.1",
     "pinia": "^2.1.7",
-    "pnpm": "^8.15.5",
     "sass": "^1.69.5",
     "stringify": "^5.2.0",
     "tailwindcss": "^3.3.5",
-    "unplugin-vue-components": "^0.25.2"
+    "unplugin-vue-components": "^0.25.2",
+    "vue-router": "^4.5.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
